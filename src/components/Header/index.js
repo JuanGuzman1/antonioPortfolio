@@ -9,12 +9,12 @@ function Header(props) {
   return (
     <div className="bg-black flex flex-1">
       <div className="flex flex-1 flex-row justify-between align-middle shadow-lg shadow-indigo-500/50">
-        <div className="self-center ml-5 pt-24 pb-24">
-          <h1 className="text-white font-sans font-semibold tracking-wider text-3xl">
+        <div className="self-center ml-10 pt-32 pb-24">
+          <h1 className="text-white font-sans font-semibold tracking-wider text-4xl">
             {title}
           </h1>
         </div>
-        <div className="h-80">
+        <div className="h-80 mr-16">
           <Canvas className="h-80">
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={0.5} />

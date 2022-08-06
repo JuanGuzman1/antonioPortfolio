@@ -1,23 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
+import PortfolioItemLeft from "../../components/PortfolioItems/PortfolioItemLeft";
+import PortfolioItemRight from "../../components/PortfolioItems/PortfolioItemRight";
 import Header from "./header";
+import { portfolioData } from "../../assets/data";
 
 const Home = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
-  const element = useRef();
   const element2 = useRef();
-
-  const initializeAnimation = () => {
-    const observer = new IntersectionObserver((entry) => {
-      if (entry[0].isIntersecting) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    });
-
-    observer.observe(element.current);
-  };
 
   const initializeAnimation2 = () => {
     const observer = new IntersectionObserver((entry) => {
@@ -32,7 +21,6 @@ const Home = () => {
   };
 
   useEffect(() => {
-    initializeAnimation();
     initializeAnimation2();
   }, []);
 
@@ -40,75 +28,19 @@ const Home = () => {
     <div className="flex flex-1 flex-col">
       <Header />
       <div className="">
-        <h1 className="mt-40 ml-24 mb-10 font-bold tracking-wider text-4xl font-sans">
-          Best Achievements
-        </h1>
+        <div className="bg-black pt-40 pl-24 pb-10 ">
+          <h1 className="font-bold tracking-wider text-4xl text-white font-sans">
+            Best Achievements
+          </h1>
+        </div>
 
         {/* achievement 1 */}
-        <div className="flex flex-row justify-between snap-y snap-mandatory snap-start">
-          <div className="h-screen w-3/4 bg-black ">
-            <iframe
-              className="shadow-xl shadow-indigo-500/50"
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/6eXyTL8-2_A?controls=0&autoplay=1&mute=1&loop=1&rel=0&showinfo=0&playlist=6eXyTL8-2_A"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe>
-          </div>
-          <div className="h-screen w-1/3 bg-black flex flex-col p-8 justify-center items-center">
-            <div
-              ref={element}
-              className={`transition-all delay-100 duration-300 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <h1 className="text-indigo-500 mb-5 animate-pulse font-sans text-center font-semibold tracking-widest text-4xl shadow-xl shadow-indigo-500/50">
-                Medieval Apocalypse
-              </h1>
-              <p className="text-white">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in
-                massa egestas mollis varius; dignissim elementum. Mollis
-                tincidunt mattis hendrerit dolor eros enim, nisi ligula ornare.
-                Hendrerit parturient habitant pharetra rutrum gravida porttitor
-                eros feugiat. Mollis elit sodales taciti duis praesent id.
-                Consequat urna vitae morbi nunc congue.
-              </p>
-            </div>
-          </div>
-        </div>
+        <PortfolioItemRight data={portfolioData[0]} />
         {/* achievement 2 */}
-        <div className="flex flex-row justify-between snap-y snap-mandatory snap-start">
-          <div className="h-screen w-1/3 p-8 bg-black flex justify-center items-center flex-col">
-            <div>
-              <h1 className="text-indigo-500 mb-5 animate-pulse font-sans text-center font-semibold tracking-widest text-4xl shadow-xl shadow-indigo-500/50">
-                ADragons Call
-              </h1>
-              <p className="text-white">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in
-                massa egestas mollis varius; dignissim elementum. Mollis
-                tincidunt mattis hendrerit dolor eros enim, nisi ligula ornare.
-                Hendrerit parturient habitant pharetra rutrum gravida porttitor
-                eros feugiat. Mollis elit sodales taciti duis praesent id.
-                Consequat urna vitae morbi nunc congue.
-              </p>
-            </div>
-          </div>
-          <div className="h-screen w-3/4 bg-black">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/6eXyTL8-2_A?controls=0&autoplay=1&mute=1&loop=1&rel=0&showinfo=0&playlist=6eXyTL8-2_A"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe>
-          </div>
-        </div>
+        <PortfolioItemLeft data={portfolioData[1]} />
 
         {/* software used */}
-        <div>
+        <div className="mb-20">
           <h1 className="mt-40 ml-24 mb-16 font-bold tracking-wider text-4xl font-sans">
             Software i use
           </h1>
