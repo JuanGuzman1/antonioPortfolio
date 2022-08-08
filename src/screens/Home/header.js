@@ -3,8 +3,15 @@ import Navbar from "../../components/Navbar";
 
 function Header() {
   return (
-    <div className="bg-black flex flex-1">
-      <div className="flex flex-1 flex-row relative justify-between align-middle shadow-lg shadow-indigo-500/50">
+    <div className="bg-black flex flex-1 flex-col">
+      <div className="flex flex-1 flex-row relative align-middle shadow-lg shadow-indigo-500/50">
+        <div className="w-60 h-60 mt-5 mb-5 ml-24 z-10 transform transition delay-0 duration-300 hover:scale-125 ">
+          <img
+            alt="noImage"
+            className="rounded-full shadow-lg shadow-indigo-500/50 "
+            src="https://img1.wsimg.com/isteam/ip/11c51d32-77d7-415c-a795-43a90fa71b14/fotoPerfil.jpg"
+          />
+        </div>
         <div className="self-center ml-5 ">
           <h1 className="text-white font-sans font-semibold tracking-wider text-3xl">
             Antonio Coronado
@@ -12,14 +19,6 @@ function Header() {
           <h1 className=" text-[color:#8A3FFC] animate-pulse shadow-lg shadow-indigo-500/50 font-mono font-semibold tracking-tight text-xl">
             Unreal Engine Developer & 3D Artist
           </h1>
-        </div>
-
-        <div className="w-72 h-72 mt-5 mb-5 mr-40 z-10 transform transition delay-0 duration-300 hover:scale-125 ">
-          <img
-            alt="noImage"
-            className="rounded-full shadow-lg shadow-indigo-500/50 "
-            src="https://img1.wsimg.com/isteam/ip/11c51d32-77d7-415c-a795-43a90fa71b14/fotoPerfil.jpg"
-          />
         </div>
       </div>
       {/* <svg
