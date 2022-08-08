@@ -26,7 +26,7 @@ function PortfolioItemRight(props) {
           className="shadow-xl shadow-indigo-500/50"
           width="100%"
           height="100%"
-          src={`https://www.youtube.com/embed/${data.videoID}?controls=0&autoplay=1&mute=1&loop=1&rel=0&showinfo=0&playlist=${data.videoID}`}
+          src={`https://www.youtube.com/embed/${data.videoID}?controls=0&autoplay=1&mute=0&loop=1&rel=0&showinfo=0&playlist=${data.videoID}`}
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

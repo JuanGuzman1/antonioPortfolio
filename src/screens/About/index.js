@@ -9,7 +9,7 @@ import {
 function About() {
   return (
     <div className="mb-20">
-      <Header title="About me" />
+      <Header title="Resume" />
       <div className="mt-20 flex flex-row justify-between">
         <div className="ml-11">
           <p className="font-sans m-9 font-medium text-2xl text-center">

@@ -27,7 +27,36 @@ const Home = () => {
   return (
     <div className="flex flex-1 flex-col">
       <Header />
-      <div className="">
+      <div className="pt-40">
+        <div className="pl-24 pb-20">
+          <h1 className="font-bold tracking-wider text-4xl text-black font-sans">
+            About me
+          </h1>
+          <p className="font-sans mt-9 font-medium text-2xl">
+            I am an Unreal Engine developer and 3D artist. I have been in video
+            games field for almost 2 years and worked on over 5 indie titles as
+            freelancer.
+          </p>
+          <p className="font-sans mt-9 font-medium text-2xl">
+            I still remember when I tried the spiderman 2 game for the first
+            time on my PS2 console, I was amazed and I didn't know it then, but
+            my destiny had been marked with a passion, video games.
+          </p>
+          <p className="font-sans mt-9 font-medium text-2xl">
+            I'm a fan of open world games and RPGs in general. I usually spend
+            weekend afternoons playing dungeons and dragons with my friends,
+            creating unforgettable adventures and unique characters.
+          </p>
+          <p className="font-sans mt-9 font-medium text-2xl">
+            I am highly self-taught and always looking to learn new skills and
+            gain new knowledge.
+          </p>
+          <p className="font-sans mt-9 font-medium text-2xl">
+            My favorite games of all time are Skyrim, The Witcher 3, and Red
+            Dead Redemption 1. My favorite book is “The name of the wind”.
+          </p>
+        </div>
+
         <div className="bg-black pt-40 pl-24 pb-10 ">
           <h1 className="font-bold tracking-wider text-4xl text-white font-sans">
             Best Achievements
