@@ -15,12 +15,12 @@ function Header(props) {
           </h1>
         </div>
         <div className="h-80 mr-16">
-          <Canvas className="h-80">
+          {/* <Canvas className="h-80">
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[-2, 5, 2]} intensity={1} />
             <Box />
-          </Canvas>
+          </Canvas> */}
         </div>
       </div>
 

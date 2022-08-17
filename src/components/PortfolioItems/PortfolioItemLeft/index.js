@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import parse from "html-react-parser";
 
 function PortfolioItemLeft(props) {
   const { data } = props;
@@ -31,7 +32,7 @@ function PortfolioItemLeft(props) {
           <h1 className="text-indigo-500 mb-5 animate-pulse font-sans text-center font-semibold tracking-widest text-4xl shadow-xl shadow-indigo-500/50">
             {data.title}
           </h1>
-          <p className="text-white">{data.text}</p>
+          <p className="text-white">{parse(data.text)}</p>
         </div>
       </div>
       <div className="h-screen w-3/4 bg-black ">

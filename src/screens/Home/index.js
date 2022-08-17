@@ -64,9 +64,9 @@ const Home = () => {
         </div>
 
         {/* achievement 1 */}
-        <PortfolioItemRight data={portfolioData[0]} />
+        <PortfolioItemRight data={portfolioData[1]} />
         {/* achievement 2 */}
-        <PortfolioItemLeft data={portfolioData[1]} />
+        <PortfolioItemLeft data={portfolioData[2]} />
 
         {/* software used */}
         <div className="mb-20">
